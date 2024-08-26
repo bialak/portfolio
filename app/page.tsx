@@ -1,11 +1,29 @@
-import circle1 from "@/images/circles/circle1.svg";
-import Image from "next/image";
+import "@/app/globals.css";
+import WelcomeSection from "@/components/WelcomeSection";
+import {
+  Explorer,
+  Extensions,
+  RunAndDebug,
+  Search,
+  SourceControl,
+} from "@/components/icons/index";
+
+export const metadata = {
+  title: "Portfolio",
+  description: "Here you will learn a few things about me and my projects",
+};
 
 export default function Home() {
   return (
-    <>
-      <Image src={circle1} alt="kolko"></Image>
-      <div className="title">Hello, My name is Klaudia Biała. </div>
-    </>
+    <div>
+      <div className="leftBar">
+        <Explorer />
+        <Search />
+        <SourceControl />
+        <RunAndDebug />
+        <Extensions />
+      </div>
+      <WelcomeSection></WelcomeSection>
+    </div>
   );
 }
