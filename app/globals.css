@@ -2,17 +2,69 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .title {
-  font-weight: bold;
+  color: #a2d2fa;
+  /* font-weight: bold; */
   position: absolute;
-  top: 5%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 20px;
+  z-index: 1;
 }
 
-.marble {
+.background {
   position: relative;
+  background-color: #0d1116;
+  height: 100vh;
+  max-width: 100%;
+  width: 100vw;
+}
+
+.leftBar {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 0%;
+}
+
+.leftBarIcon {
+  cursor: pointer;
+  margin-left: 35%;
+  margin-top: 35%;
+  margin-bottom: 25%;
+  color: rgb(134, 134, 134);
+}
+
+.leftBarIcon:hover {
+  color: rgb(215, 215, 215);
+}
+
+.icon-container {
+  position: relative;
+}
+
+.leftBar .active {
+  color: rgb(215, 215, 215);
+}
+
+.icon-container.active::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 3px;
+  height: 100%;
+  background-color: #0078d4;
 }

@@ -1,12 +1,6 @@
 import "@/app/globals.css";
 import WelcomeSection from "@/components/WelcomeSection";
-import {
-  Explorer,
-  Extensions,
-  RunAndDebug,
-  Search,
-  SourceControl,
-} from "@/components/icons/index";
+import ToolBar from "@/components/ToolBar";
 
 export const metadata = {
   title: "Portfolio",
@@ -16,13 +10,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <div className="leftBar">
-        <Explorer />
-        <Search />
-        <SourceControl />
-        <RunAndDebug />
-        <Extensions />
-      </div>
+      <ToolBar></ToolBar>
       <WelcomeSection></WelcomeSection>
     </div>
   );
