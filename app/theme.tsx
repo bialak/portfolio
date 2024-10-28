@@ -5,8 +5,11 @@ import "@/app/globals.css";
 
 const theme = createTheme({
   palette: {
+    background: {
+      default: "#0d1116",
+    },
     primary: {
-      main: "#1ca8cc",
+      main: "#a2d2fa;",
       dark: "#0e728c",
     },
   },
