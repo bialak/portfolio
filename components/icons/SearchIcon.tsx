@@ -22,7 +22,7 @@ export default function SearchIcon({ active, handleClick }: SearchIconProps) {
         },
       }}
       placement="right"
-      title="Delete"
+      title="Projects"
     >
       <Box
         onClick={handleClick}
