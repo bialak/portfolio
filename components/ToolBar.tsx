@@ -18,7 +18,9 @@ export enum ToolbarIcon {
 }
 
 export default function ToolBar() {
-  const [activeIcon, setActiveIcon] = useState<ToolbarIcon | null>();
+  const [activeIcon, setActiveIcon] = useState<ToolbarIcon | null>(
+    ToolbarIcon.Explorer
+  );
 
   const toolbarIcons = [
     {
