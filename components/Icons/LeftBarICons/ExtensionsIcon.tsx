@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Tooltip, Box } from "@mui/material";
 
@@ -37,19 +35,15 @@ export default function ExtensionsIcon({
       >
         <svg
           className={
-            active ? " leftBarIcon extensions active" : "leftBarIcon extensions"
+            active ? " leftBarIcon explorer active" : "leftBarIcon explorer"
           }
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
-          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          height="30px"
+          viewBox="0 -960 960 960"
+          width="30px"
+          fill="currentColor"
         >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M13.5 1.5L15 0H22.5L24 1.5V9L22.5 10.5H15L13.5 9V1.5ZM15 1.5V9H22.5V1.5H15ZM0 15V6L1.5 4.5H9L10.5 6V13.5H18L19.5 15V22.5L18 24H10.5H9H1.5L0 22.5V15ZM9 13.5V6H1.5V13.5H9ZM9 15H1.5V22.5H9V15ZM10.5 22.5H18V15H10.5V22.5Z"
-            fill="currentColor"
-          />
+          <path d="M666-440 440-666l226-226 226 226-226 226Zm-546-80v-320h320v320H120Zm400 400v-320h320v320H520Zm-400 0v-320h320v320H120Zm80-480h160v-160H200v160Zm467 48 113-113-113-113-113 113 113 113Zm-67 352h160v-160H600v160Zm-400 0h160v-160H200v160Zm160-400Zm194-65ZM360-360Zm240 0Z" />
         </svg>
       </Box>
     </Tooltip>

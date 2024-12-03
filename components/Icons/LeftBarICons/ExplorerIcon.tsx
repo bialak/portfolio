@@ -35,12 +35,13 @@ const ExplorerIcon = ({ active, handleClick }: ExplorerIconProps) => {
           className={
             active ? " leftBarIcon explorer active" : "leftBarIcon explorer"
           }
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          height="30px"
+          viewBox="0 -960 960 960"
+          width="30px"
           fill="currentColor"
         >
-          <path d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z" />
+          <path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z" />
         </svg>
       </Box>
     </Tooltip>

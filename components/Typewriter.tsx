@@ -20,7 +20,11 @@ const Typewriter = ({ text, delay }: TypewriterProps) => {
     }
   }, [currentIndex, delay, text]);
 
-  return <span className="title">{currentText}</span>;
+  return (
+    <span className="title" style={{ color: "#a2d2fa" }}>
+      {currentText}
+    </span>
+  );
 };
 
 export default Typewriter;

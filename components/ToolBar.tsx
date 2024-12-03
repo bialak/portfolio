@@ -6,7 +6,7 @@ import {
   RunAndDebugIcon,
   SearchIcon,
   SourceControlIcon,
-} from "@/components/icons/index";
+} from "@/components/Icons/LeftBarIcons";
 import { useState } from "react";
 
 export enum ToolbarIcon {
@@ -14,7 +14,7 @@ export enum ToolbarIcon {
   Extensions = "extensions",
   RunAndDebug = "runAndDebug",
   Serach = "search",
-  SourceControl = "SourceConstrol",
+  SourceControl = "sourceConstrol",
 }
 
 export default function ToolBar() {

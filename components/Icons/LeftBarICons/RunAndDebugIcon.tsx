@@ -1,10 +1,14 @@
-import { Box, Tooltip } from "@mui/material";
+import { Tooltip, Box } from "@mui/material";
 
-interface SearchIconProps {
+interface RunAndDebugIconProps {
   active: boolean;
   handleClick: () => void;
 }
-export default function SearchIcon({ active, handleClick }: SearchIconProps) {
+
+export default function RunAndDebugIcon({
+  active,
+  handleClick,
+}: RunAndDebugIconProps) {
   return (
     <Tooltip
       disableFocusListener
@@ -22,7 +26,7 @@ export default function SearchIcon({ active, handleClick }: SearchIconProps) {
         },
       }}
       placement="right"
-      title="Projects"
+      title="Delete"
     >
       <Box
         onClick={handleClick}
@@ -30,14 +34,15 @@ export default function SearchIcon({ active, handleClick }: SearchIconProps) {
       >
         <svg
           className={
-            active ? " leftBarIcon search active" : "leftBarIcon search"
+            active ? "leftBarIcon explorer active" : "leftBarIcon explorer"
           }
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          height="30px"
+          width="30px"
+          viewBox="0 -960 960 960"
           fill="currentColor"
         >
-          <path d="M15.25 0a8.25 8.25 0 0 0-6.18 13.72L1 22.88l1.12 1 8.05-9.12A8.251 8.251 0 1 0 15.25.01V0zm0 15a6.75 6.75 0 1 1 0-13.5 6.75 6.75 0 0 1 0 13.5z" />
+          <path d="M320-203v-560l440 280-440 280Zm60-280Zm0 171 269-171-269-171v342Z" />
         </svg>
       </Box>
     </Tooltip>
