@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@mui/material";
 import React from "react";
 import theme from "@/app/theme";
-import MainSection from "@/components/Sections/MainSection";
 import ProjectsBar from "@/components/ProjectsBar";
 import ToolBar from "@/components/ToolBar";
 import UpperBar from "@/components/UpperBar";
