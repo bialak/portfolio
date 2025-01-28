@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Grid } from "@mui/material";
+import { useParams } from "next/navigation";
 
 export default function UpperBar() {
+  const params = useParams();
+  const activeTab = params.projectName;
   return (
     <Grid
       container
@@ -45,7 +49,7 @@ export default function UpperBar() {
           borderRadius: "5px",
         }}
       >
-        Welcome
+        {activeTab === undefined ? "Welcome" : activeTab}
       </Grid>
     </Grid>
   );

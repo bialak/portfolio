@@ -14,20 +14,6 @@ body {
   width: 100%;
 }
 
-/* .title {
-  color: #a2d2fa; */
-/* position: absolute;
-  top: 40%;
-  left: 18%; */
-/* font-size: 20px;
-  z-index: 1;
-} */
-/* .women {
-  position: absolute;
-  left: 60%;
-  top: 20%;
-} */
-
 .leftBar {
   display: flex;
   flex-direction: column;

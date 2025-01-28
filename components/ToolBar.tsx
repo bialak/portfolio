@@ -7,6 +7,7 @@ import {
   SearchIcon,
   SourceControlIcon,
 } from "@/components/Icons/LeftBarIcons";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export enum ToolbarIcon {
@@ -34,26 +35,6 @@ export default function ToolBar() {
       ),
     },
     {
-      type: ToolbarIcon.Extensions,
-      icon: (
-        <ExtensionsIcon
-          handleClick={() => changeActiveElement(ToolbarIcon.Extensions)}
-          key={ToolbarIcon.Extensions}
-          active={activeIcon === ToolbarIcon.Extensions}
-        />
-      ),
-    },
-    {
-      type: ToolbarIcon.RunAndDebug,
-      icon: (
-        <RunAndDebugIcon
-          handleClick={() => changeActiveElement(ToolbarIcon.RunAndDebug)}
-          key={ToolbarIcon.RunAndDebug}
-          active={activeIcon === ToolbarIcon.RunAndDebug}
-        />
-      ),
-    },
-    {
       type: ToolbarIcon.Serach,
       icon: (
         <SearchIcon
@@ -73,11 +54,35 @@ export default function ToolBar() {
         />
       ),
     },
+    {
+      type: ToolbarIcon.RunAndDebug,
+      icon: (
+        <RunAndDebugIcon
+          handleClick={() => changeActiveElement(ToolbarIcon.RunAndDebug)}
+          key={ToolbarIcon.RunAndDebug}
+          active={activeIcon === ToolbarIcon.RunAndDebug}
+        />
+      ),
+    },
+    {
+      url: "",
+      type: ToolbarIcon.Extensions,
+      icon: (
+        <ExtensionsIcon
+          handleClick={() => changeActiveElement(ToolbarIcon.Extensions)}
+          key={ToolbarIcon.Extensions}
+          active={activeIcon === ToolbarIcon.Extensions}
+        />
+      ),
+    },
   ];
+
+  const router = useRouter();
 
   const changeActiveElement = (clickedIcon: ToolbarIcon) => {
     setActiveIcon(clickedIcon);
-    console.log(activeIcon);
+
+    router.push("/");
   };
 
   return (

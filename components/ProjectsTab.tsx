@@ -1,16 +1,29 @@
-import React from "react";
-import { Grid } from "@mui/material";
+"use client";
+import { useRouter } from "next/navigation";
+import Grid from "@mui/material/Grid";
 import Image from "next/image";
 
 interface ProjectsTabProps {
   projectName: string;
-  icon: any;
+  icon: JSX.Element;
+  isActive: boolean;
 }
 
-export default function ProjectsTab({ projectName, icon }: ProjectsTabProps) {
+export default function ProjectsTab({
+  projectName,
+  icon,
+  isActive,
+}: ProjectsTabProps) {
+  const router = useRouter();
+
+  function handleClick() {
+    router.push(`/${projectName}`);
+  }
+
   return (
     <Grid
       container
+      onClick={handleClick}
       gap={"5px"}
       sx={{
         color: "rgb(134, 134, 134)",
@@ -21,6 +34,10 @@ export default function ProjectsTab({ projectName, icon }: ProjectsTabProps) {
         fontSize: "13px",
         marginRight: "3px",
         position: "relative",
+        borderBottom: isActive ? "none" : "1px solid rgba(157, 157, 157, 0.25)",
+        borderTop: isActive
+          ? "2px solid #0078d4"
+          : "1px solid rgba(157, 157, 157, 0.25)",
         "&:hover": {
           backgroundColor: "#1f1f1f",
           "& img": {
@@ -31,7 +48,6 @@ export default function ProjectsTab({ projectName, icon }: ProjectsTabProps) {
     >
       <Grid item>{icon}</Grid>
       <Grid item>{projectName}</Grid>
-
       <Grid
         item
         sx={{
@@ -43,7 +59,12 @@ export default function ProjectsTab({ projectName, icon }: ProjectsTabProps) {
           },
         }}
       >
-        <Image alt="svg" src={"/svgs/closeIcon.svg"} width={15} height={15} />
+        <Image
+          alt="Close Icon"
+          src="/svgs/closeIcon.svg"
+          width={15}
+          height={15}
+        />
       </Grid>
     </Grid>
   );

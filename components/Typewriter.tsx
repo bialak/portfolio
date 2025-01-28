@@ -22,7 +22,12 @@ const Typewriter = ({ text, delay }: TypewriterProps) => {
 
   return (
     <span className="title" style={{ color: "#a2d2fa" }}>
-      {currentText}
+      {currentText.split("\n").map((line, index) => (
+        <span key={index}>
+          {line}
+          <br />
+        </span>
+      ))}
     </span>
   );
 };
